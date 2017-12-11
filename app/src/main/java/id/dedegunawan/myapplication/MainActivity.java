@@ -33,11 +33,14 @@ public class MainActivity extends AppCompatActivity {
                     "Masukkan Angka1 & Angka2 terlebih dahulu",
                     Toast.LENGTH_SHORT)
                     .show();
+            tvHasil.setText("-");
             return ;
+        } else {
+            Double hasil = Double.valueOf(angka1) + Double.valueOf(angka2);
+            tvHasil.setText(String.valueOf(hasil));
         }
 
-        Double hasil = Double.valueOf(angka1) + Double.valueOf(angka2);
-        tvHasil.setText(String.valueOf(hasil));
+
     }
     public void kurang(View view) {
         String angka1 = etAngka1.getText().toString();
@@ -49,11 +52,14 @@ public class MainActivity extends AppCompatActivity {
                     "Masukkan Angka1 & Angka2 terlebih dahulu",
                     Toast.LENGTH_SHORT)
                     .show();
+            tvHasil.setText("-");
             return ;
         }
+        else {
+            Double hasil = Double.valueOf(angka1) - Double.valueOf(angka2);
+            tvHasil.setText(String.valueOf(hasil));
+        }
 
-        Double hasil = Double.valueOf(angka1) - Double.valueOf(angka2);
-        tvHasil.setText(String.valueOf(hasil));
     }
     public void kali(View view) {
         String angka1 = etAngka1.getText().toString();
@@ -65,11 +71,14 @@ public class MainActivity extends AppCompatActivity {
                     "Masukkan Angka1 & Angka2 terlebih dahulu",
                     Toast.LENGTH_SHORT)
                     .show();
+            tvHasil.setText("-");
             return ;
+        } else {
+            Double hasil = Double.valueOf(angka1) * Double.valueOf(angka2);
+            tvHasil.setText(String.valueOf(hasil));
         }
 
-        Double hasil = Double.valueOf(angka1) * Double.valueOf(angka2);
-        tvHasil.setText(String.valueOf(hasil));
+
     }
     public void bagi(View view) {
         String angka1 = etAngka1.getText().toString();
@@ -81,19 +90,23 @@ public class MainActivity extends AppCompatActivity {
                     "Masukkan Angka1 & Angka2 terlebih dahulu",
                     Toast.LENGTH_SHORT)
                     .show();
+            tvHasil.setText("-");
             return ;
         }
 
-        if (Integer.valueOf(angka2) == 0) {
+        else if (Integer.valueOf(angka2) == 0) {
             Toast.makeText(
                     MainActivity.this,
                     "Angka 2 Tidak boleh sama dengan 0",
                     Toast.LENGTH_SHORT)
                     .show();
+            tvHasil.setText("-");
             return ;
+        } else {
+            Double hasil = Double.valueOf(angka1) / Double.valueOf(angka2);
+            tvHasil.setText(String.valueOf(hasil));
         }
 
-        Double hasil = Double.valueOf(angka1) / Double.valueOf(angka2);
-        tvHasil.setText(String.valueOf(hasil));
+
     }
 }

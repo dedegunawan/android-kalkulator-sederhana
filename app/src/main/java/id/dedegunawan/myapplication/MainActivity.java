@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     "Masukkan Angka1 & Angka2 terlebih dahulu",
                     Toast.LENGTH_SHORT)
                     .show();
+            return ;
         }
 
         Double hasil = Double.valueOf(angka1) + Double.valueOf(angka2);
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     "Masukkan Angka1 & Angka2 terlebih dahulu",
                     Toast.LENGTH_SHORT)
                     .show();
+            return ;
         }
 
         Double hasil = Double.valueOf(angka1) - Double.valueOf(angka2);
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     "Masukkan Angka1 & Angka2 terlebih dahulu",
                     Toast.LENGTH_SHORT)
                     .show();
+            return ;
         }
 
         Double hasil = Double.valueOf(angka1) * Double.valueOf(angka2);
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     "Masukkan Angka1 & Angka2 terlebih dahulu",
                     Toast.LENGTH_SHORT)
                     .show();
+            return ;
         }
 
         if (Integer.valueOf(angka2) == 0) {
@@ -86,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     "Angka 2 Tidak boleh sama dengan 0",
                     Toast.LENGTH_SHORT)
                     .show();
+            return ;
         }
 
         Double hasil = Double.valueOf(angka1) / Double.valueOf(angka2);
